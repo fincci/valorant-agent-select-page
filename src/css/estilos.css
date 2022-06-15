@@ -68,7 +68,7 @@ main {
     height: 100%;
 }
 
-.selecao-de-agentes .agente-grande .nome1::before, .selecao-de-agentes .agente-grande .nome2::before {
+.selecao-de-agentes .agente-grande .nomeP1::before, .selecao-de-agentes .agente-grande .nomeP2::before {
     content: '';
     height: 3px;
     width: 50%;
@@ -77,7 +77,7 @@ main {
     transform: translate(-50%, -50%);
 }
 
-.selecao-de-agentes .agente-grande .nome1 h2, .selecao-de-agentes .agente-grande .nome2 h2 {
+.selecao-de-agentes .agente-grande .nomeP1 h2, .selecao-de-agentes .agente-grande .nomeP2 h2 {
     text-transform: uppercase;
     color: var(--cor-titulo-fraco);
     position: absolute;
@@ -86,11 +86,11 @@ main {
     font-size: 27px;
 }
 
-.selecao-de-agentes .agente-grande.agenteP1 .nome1::before {
+.selecao-de-agentes .agente-grande.agenteP1 .nomeP1::before {
     background-color: var(--cor-azul-principal);
 }
 
-.selecao-de-agentes .agente-grande.agenteP2 .nome2::before {
+.selecao-de-agentes .agente-grande.agenteP2 .nomeP2::before {
     background-color: var(--cor-vermelha-principal);
 }
 
