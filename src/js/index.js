@@ -10,6 +10,12 @@ function player1Selecionando() {
     agentePlayer1.addEventListener('click', () => {
         agentePlayer2.classList.remove('jogador2-escolhendo')
         agentePlayer1.classList.add('jogador1-escolhendo')
+        let ani = document.getElementById('indicator')
+        if (ani.style.animation !== 'changeSides .3s reverse') {
+            ani.style.animation = 'none';
+            ani.offsetHeight;
+            ani.style.animation = 'changeSides .3s reverse';
+        }
     })
 }
 
@@ -17,8 +23,16 @@ function player2Selecionando() {
     agentePlayer2.addEventListener('click', () => {
         agentePlayer1.classList.remove('jogador1-escolhendo')
         agentePlayer2.classList.add('jogador2-escolhendo')
+        let ani = document.getElementById('indicator')
+        ani.style.animation = 'none';
+        ani.offsetHeight;
+        ani.style.animation = 'changeSides .3s forwards';
     })
 }
+
+// function ani() {
+//     document.getElementById('indicator').classList.add('animacoes')
+// }
 
 listaAgentes.forEach(agente => {
 
@@ -29,7 +43,7 @@ listaAgentes.forEach(agente => {
             var playerAtivo = 'P2'
             console.log(playerAtivo);
         }
-        
+
         mudarClasseSelecionado()
         mudarImg()
         mudarNome()

@@ -15,6 +15,7 @@ body::before {
     width: 100%;
     height: 100%;
     opacity: 0.2;
+    z-index: -1;
 }
 
 main {
@@ -52,42 +53,58 @@ main {
     position: relative;
 }
 
-.selecao-de-agentes .agente-grande.jogador1-escolhendo {
-    background: radial-gradient(circle, rgb(10, 86, 252) 0%, rgba(255,255,255,0) 50%);
-}
-
-.selecao-de-agentes .agente-grande.jogador2-escolhendo {
-    background: radial-gradient(circle, rgb(248, 7, 7) 0%, rgba(255,255,255,0) 50%);
-}
-
 .selecao-de-agentes .agente-grande img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    /* position: absolute; */
+    /* left: 50%; */
+    /* top: 50%; */
+    /* transform: translate(-50%, -50%); */
     height: 100%;
 }
 
-.selecao-de-agentes .agente-grande .nomeP1::before, .selecao-de-agentes .agente-grande .nomeP2::before {
-    content: '';
-    height: 3px;
-    width: 50%;
-    position: absolute;
-    bottom: -35px;
-    transform: translate(-50%, -50%);
+@keyframes imgAni {
+    from {transform: scale(1);}
+    to {transform: scale(1.05);}
 }
 
-.selecao-de-agentes .agente-grande .nomeP1 h2, .selecao-de-agentes .agente-grande .nomeP2 h2 {
+.selecao-de-agentes .agente-grande.jogador1-escolhendo img, .selecao-de-agentes .agente-grande.jogador2-escolhendo img {
+    animation: imgAni 1s infinite alternate;
+}
+
+.selecao-de-agentes .agente-grande .nomeP1 h2,
+.selecao-de-agentes .agente-grande .nomeP2 h2 {
     text-transform: uppercase;
     color: var(--cor-titulo-fraco);
-    position: absolute;
-    bottom: -30px;
+    /* position: absolute; */
+    /* bottom: -30px; */
     width: 100%;
     font-size: 27px;
 }
 
-.selecao-de-agentes .agente-grande.agenteP1 .nomeP1::before {
+.container-indicador {
+    width: 100vw;
+    height: 50px;
+    position: relative;
+}
+
+.container-indicador .indicator {
+    height: 3px;
+    width: 50vw;
+    position: absolute;
+    /* transform: translateY(50px); */
+    bottom: 0;
     background-color: var(--cor-azul-principal);
+}
+
+@keyframes changeSides {
+    from {
+        transform: translateX(0%);
+        background-color: #0a56fc;
+    }
+
+    to {
+        transform: translateX(100%);
+        background-color: #f80707;
+    }
 }
 
 .selecao-de-agentes .agente-grande.agenteP2 .nomeP2::before {
@@ -118,7 +135,8 @@ main {
     height: 100%;
 }
 
-.selecao-de-agentes .lista-de-agentes .agente.selecionadoP1, .selecao-de-agentes .lista-de-agentes .agente.selecionadoP2 {
+.selecao-de-agentes .lista-de-agentes .agente.selecionadoP1,
+.selecao-de-agentes .lista-de-agentes .agente.selecionadoP2 {
     background-color: var(--cor-terciaria);
 }
 
@@ -129,7 +147,8 @@ main {
     z-index: 2;
 }
 
-.selecao-de-agentes .lista-de-agentes .agente .tagP1,.selecao-de-agentes .lista-de-agentes .agente .tagP2 {
+.selecao-de-agentes .lista-de-agentes .agente .tagP1,
+.selecao-de-agentes .lista-de-agentes .agente .tagP2 {
     font-family: 'valorant', Times, serif;
     position: absolute;
     top: 5px;
@@ -148,4 +167,3 @@ main {
     animation: text-glowing-red .3s ease-in-out infinite;
     animation-direction: alternate;
 }
-
