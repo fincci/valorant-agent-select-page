@@ -11,13 +11,13 @@ listaAgentes.forEach(agente => {
             const agenteSelecionado = agente
             agenteSelecionado.classList.add('selecionadoP1')
 
-            const imgNome = 'full-' + agenteSelecionado.attributes.id.value + '.png'
+            let imgNome = `full-${agenteSelecionado.attributes.id.value}.png`
             const imgP1 = document.getElementById('agenteP1')
-            imgP1.src = "src/imagens/" + imgNome
+            imgP1.src = `src/imagens/${imgNome}`
 
             const nomeAgente = agenteSelecionado.getAttribute('data-name')
             const nomeAtivo = document.querySelector('.nome1')
-            nomeAtivo.innerHTML = "<h2>" + nomeAgente + "<h2>"
+            nomeAtivo.innerHTML = `<h2>${nomeAgente}</h2>`
 
             const span = document.querySelector('.tagP1')
             span.remove();
@@ -29,7 +29,7 @@ listaAgentes.forEach(agente => {
     })
 })
 
-agentesGrande[0].addEventListener('click', () => {
+agentePlayer1.addEventListener('click', () => {
 
     agentesGrande[1].classList.remove('jogador2-escolhendo')
     agentesGrande[0].classList.add('jogador1-escolhendo')
@@ -65,7 +65,7 @@ agentesGrande[0].addEventListener('click', () => {
 
 })
 
-agentesGrande[1].addEventListener('click', () => {
+agentePlayer2.addEventListener('click', () => {
 
     agentesGrande[0].classList.remove('jogador1-escolhendo')
     agentesGrande[1].classList.add('jogador2-escolhendo')
