@@ -30,10 +30,6 @@ function player2Selecionando() {
     })
 }
 
-// function ani() {
-//     document.getElementById('indicator').classList.add('animacoes')
-// }
-
 listaAgentes.forEach(agente => {
 
     agente.addEventListener('click', () => {
