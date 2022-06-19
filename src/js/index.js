@@ -2,9 +2,19 @@ const listaAgentes = document.querySelectorAll('.agente')
 const agentesGrande = document.querySelectorAll('.agente-grande')
 const agentePlayer1 = agentesGrande[0]
 const agentePlayer2 = agentesGrande[1]
+const theme = document.getElementById('musictheme')
 
 player1Selecionando()
 player2Selecionando()
+playtheme();
+
+function playtheme() {
+    const body = document.querySelector('body')
+    body.addEventListener('click', () => {
+        theme.volume = 0.2
+        theme.play();
+    })
+}
 
 function player1Selecionando() {
     agentePlayer1.addEventListener('click', () => {
@@ -37,7 +47,6 @@ listaAgentes.forEach(agente => {
             var playerAtivo = 'P1'
         } else {
             var playerAtivo = 'P2'
-            console.log(playerAtivo);
         }
 
         mudarClasseSelecionado()
