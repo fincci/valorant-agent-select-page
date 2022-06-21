@@ -1,3 +1,10 @@
+@media (max-width: 1600px) {
+    .selecao-de-agentes .agente-grande {
+        height: 50vh;
+        min-width: 500px;
+    }
+}
+
 @media (max-width: 1280px) {
     .cabecalho {
         margin: 0 27% 50px;
@@ -8,27 +15,24 @@
     }
 
     .selecao-de-agentes .agente-grande {
-        height: 50vh;
+        height: 40vh;
+        min-width: 350px;
     }
 
     .selecao-de-agentes .lista-de-agentes {
         max-width: 330px;
     }
-
-    .selecao-de-agentes .lista-de-agentes .agente {
-        width: 100px;
-        height: 100px;
-    }
 }
 
 @media (max-width: 1000px) {
     .selecao-de-agentes .lista-de-agentes .agente {
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
     }
 
     .selecao-de-agentes .agente-grande {
-        height: 40vh;
+        height: 30vh;
+        min-width: 250px;
     }
 }
 
@@ -51,6 +55,10 @@
     }
 
     .selecao-de-agentes .agente-grande {
+        display: none;
+    }
+
+    .indicator {
         display: none;
     }
 }

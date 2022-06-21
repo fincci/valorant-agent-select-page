@@ -11,7 +11,7 @@ playtheme();
 function playtheme() {
     const body = document.querySelector('body')
     body.addEventListener('click', () => {
-        theme.volume = 0.2
+        theme.volume = 0.1
         theme.play();
     })
 }

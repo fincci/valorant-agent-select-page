@@ -48,16 +48,12 @@ main {
 
 .selecao-de-agentes .agente-grande {
     text-align: center;
-    width: 30%;
     height: 60vh;
+    min-width: 600px;
     position: relative;
 }
 
 .selecao-de-agentes .agente-grande img {
-    /* position: absolute; */
-    /* left: 50%; */
-    /* top: 50%; */
-    /* transform: translate(-50%, -50%); */
     height: 100%;
 }
 
@@ -74,8 +70,6 @@ main {
 .selecao-de-agentes .agente-grande .nomeP2 h2 {
     text-transform: uppercase;
     color: var(--cor-titulo-fraco);
-    /* position: absolute; */
-    /* bottom: -30px; */
     width: 100%;
     font-size: 27px;
 }
@@ -90,7 +84,6 @@ main {
     height: 3px;
     width: 50vw;
     position: absolute;
-    /* transform: translateY(50px); */
     bottom: 0;
     background-color: var(--cor-azul-principal);
 }
@@ -159,7 +152,7 @@ main {
 .selecao-de-agentes .lista-de-agentes .agente .tagP1 {
     left: 5px;
     animation: text-glowing-blue .3s ease-in-out infinite;
-    animation-direction: alternate;
+    /* animation-direction: alternate; */
 }
 
 .selecao-de-agentes .lista-de-agentes .agente .tagP2 {
